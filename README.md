@@ -10,7 +10,7 @@ Diifferent algorithms used can be summarized below.
 
   * **Gaussian sampling** - This mehtod initiates the action space with completely random values. It is clearly observant the the average episode length is no longer than 7. 
   * **Naive-Greedy Brute Force** - The Naive weight allocation method used a brute force algorithm to get the best weights. The average episode length was found to be around 200. This approach iterates through 100 random weigths which decide the update steps and saves the best obtained weights. It is basically a single layer Neural Network without backpropogation, hence **Naive**.
-  * Further improvements were made by using **PID controlled On-Off controller** with fixed weights. The graph obtained is of oscillatory nature as the **control problem is of Regulatory nature**. The control block and the output obtained is shown below. 
+  * Further improvements were made by using **PID controlled On-Off controller** with fixed weights. The graph obtained is of oscillatory nature as the **control problem is of Regulatory nature**. The control block and the output obtained is shown below. The pole doesnt fall ever !!!!
 
 ![PID](PID.png)  ![Control Block](control_block.png) 
 
