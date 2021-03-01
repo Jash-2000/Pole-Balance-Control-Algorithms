@@ -34,3 +34,24 @@ Diifferent algorithms used can be summarized below.
     from gym import wrappers
     env = wrappers.Monitor(env, '..\Desktop\RL\MovieFiles', force = True)
    ```
+   
+## Debug the environment
+
+The environment that we import from gym have user-friendly APIs. The following section is specific to gym environments.
+ * Getiting the largest value possible in state_space
+  ```python
+     print(env.observation_space.high)
+  ```
+ * Getting the lowest value possible in state_space
+  ```python
+     print(env.observation_space.low)
+  ```
+ * Getting the number of actions space possible
+   ```python
+     print(env.action_space.n)
+   ```
+ * Viewing the animation 
+  ```python
+     env.render()
+  ```
+  
