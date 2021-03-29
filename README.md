@@ -8,16 +8,13 @@ The task of balaning a beam on a cart is a **classic problem in Control Engineer
 In this repository, I have implemented this problem using various **model based** and **model free** algorithms. The simulation environment used in OpenAI Gym which provides the data for **feedback loop**. It also aids in obaining a rendered animation output. 
 Diifferent algorithms used can be summarized below.
 
-  1 **__Gaussian sampling__** - This mehtod initiates the action space with completely random values. It is clearly observant the the average episode length is no longer than 7. 
-  2 **__Naive-Greedy Brute Force__** - The Naive weight allocation method used a brute force algorithm to get the best weights. The average episode length was found to be around 200. This approach iterates through 100 random weigths which decide the update steps and saves the best obtained weights. It is basically a single layer Neural Network without backpropogation, hence **Naive**.
-  3 Further improvements were made by using **__PID controlled On-Off controller__** with fixed weights. The graph obtained is of oscillatory nature as the **control problem is of Regulatory nature**. The control block and the output obtained is shown below. The pole doesnt fall ever !!!! But, it is quite obvious that this is overfitting the model and thus, would not be able to control the pole in dynamic environment. 
-
-![PID](PID.png)  ![Control Block](control_block.png) 
-
-
-  4 In the fourth trial, I used a simple **__Q-learning model__** that used epsilon greedy based matrix for mitigating through exploration-exploitation trade-offs. 
-  
-  5 Finally, I also developed a **__Deep Q-Learning__** network(dqn) based system for balancing the beam, using a Boltzmann policy based rewardning strategy. I made use of the **baselines** library. 
+ 1. **__Gaussian sampling__** - This mehtod initiates the action space with completely random values. It is clearly observant the the average episode length is no longer than 7.
+ 2. **__Naive-Greedy Brute Force__** - The Naive weight allocation method used a brute force algorithm to get the best weights. The average episode length was found to be around 200. This approach iterates through 100 random weigths which decide the update steps and saves the best obtained weights. It is basically a single layer Neural Network without backpropogation, hence **Naive**.
+ 3. Further improvements were made by using **__PID controlled On-Off controller__** with fixed weights. The graph obtained is of oscillatory nature as the **control problem is of Regulatory nature**. The control block and the output obtained is shown below. The pole doesnt fall ever !!!! But, it is quite obvious that this is overfitting the model and thus, would not be able to control the pole in dynamic environment                                                        .                                                        
+ ![PID](PID.png)  ![Control Block](control_block.png).
+ 
+ 4.  In the fourth trial, I used a simple **__Q-learning model__** that used epsilon greedy based matrix for mitigating through exploration-exploitation trade-offs. 
+ 5. Finally, I also developed a **__Deep Q-Learning__** network(dqn) based system for balancing the beam, using a Boltzmann policy based rewardning strategy. I made use of the **baselines** library. 
 
 ---
 
